@@ -10,8 +10,6 @@ class Helper {
  public:
   Helper() = default;
   void processQueries(std::istream &in, std::ostream &out);
- private:
-  std::vector<Trie> version_;
 };
 
 #endif //SELECTION__HELPER_H_

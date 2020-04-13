@@ -32,13 +32,13 @@ class Trie::State {
 };
 
 struct Trie::TrieNode {
-  std::map<wchar_t, TrieNode *> transition;
+  std::map<char, TrieNode *> transition;
   uint32_t frequency = 0;
   TrieNode *parent = nullptr;
   TrieNode *completion_node = this;
-  wchar_t parent_char = '\0';
+  char parent_char = '\0';
   TrieNode(TrieNode *parent,
-           wchar_t parent_char,
+           char parent_char,
            uint32_t frequency = 0) : parent(parent),
                                      parent_char(parent_char),
                                      frequency(frequency) {}
