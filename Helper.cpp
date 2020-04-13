@@ -31,6 +31,7 @@ void Helper::processQueries(std::istream &in, std::ostream &out) {
       std::string word;
       std::cin >> word;
       state.addLetters(word);
+      std::cout << trie.complete(state) << '\n';
     } else if (command == "complete") {
       std::cout << trie.complete(state) << '\n';
     }
